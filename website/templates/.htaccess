@@ -1,0 +1,16 @@
+
+# Réecriture des urls
+
+
+ RewriteEngine On
+
+
+ RewriteRule ^index$ index.php
+ RewriteRule ^location$ location.php
+ RewriteRule ^contact$ contact.php
+ RewriteRule ^about$ about.php
+ RewriteRule ^job$ job.php
+
+
+
+

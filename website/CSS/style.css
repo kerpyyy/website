@@ -1,0 +1,844 @@
+                                /* *****************************************************************
+                                                            GLOBAL
+                                ***************************************************************** */
+
+*  {
+    box-sizing:border-box;
+}
+html {
+    font-size:62.5%;
+}
+body {
+    font-size:1.6rem;
+    margin:0;
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 0.3px;
+    line-height: 26px;
+}
+
+h1,h2,h3,h4{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+img {
+    max-width:100%;
+    height:auto;
+}
+
+a{
+    color:black;
+}
+
+                                /* *****************************************************************
+                                                            HEADER
+                                ***************************************************************** */
+
+                                /* Optimisation de l'ouverture fermeture du bouton pour le menu nav. */
+
+#menu-button{
+    position:absolute;
+    width:50px;
+    height:50px;
+    background-color:rgb(71, 66, 153);
+    color: white;
+    text-align: center;
+    border-radius: 100px;
+    font-size:40px;
+    transition:all .5s;
+    font-family: Arial;
+    line-height: 45px; 
+}
+  
+#menu-button::after{
+    content:'×';
+}
+
+#menu-button.close{
+    color: white;
+    border: 2px solid white;
+    text-align: center;
+    border-radius: 100px;
+    background-color:rgb(71, 66, 153);
+}
+
+#menu-button.close::after{
+    content:'≡';
+}
+
+#menu{
+    transition:transform .3s;
+    position:absolute;
+    width:auto;
+    transform:translateY(-1000px);
+    display: flex;
+    flex-direction: column;
+    font-size: 4rem;
+    background-color: rgb(205, 26, 60, 0.8);
+    padding: 40px;
+    line-height: 35px;
+    border: 2px solid rgb(71, 66, 153);
+}
+
+#menu a{
+    color: white;
+    text-decoration: none;
+}
+
+#menu.show-menu{
+    transform:translateY(250px);
+}
+
+/* -------------Fin de l'optimisation */
+
+.header{
+    display: flex;
+    align-items: center;
+    border-bottom: 2.5px solid rgb(71, 66, 153);
+    padding:20px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 99;
+}
+
+.logo{
+    text-align: end;
+    width:67%
+}
+
+.logo img{
+    width: 50%;
+}
+
+.trad{
+    width: 33%;
+    text-align:end
+}
+
+.trad img:hover{
+    transform: scale(1.1) rotate(20deg);
+}
+
+.trad img{
+    width: 22%;
+}
+
+
+                                /* *****************************************************************
+                                                            INDEX
+                                ***************************************************************** */
+
+                                
+.center{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.main {
+	background: url(../images/ax2.png) no-repeat center center;
+	background-size: cover;
+	height: 700px;
+}
+
+.main .textmain h1{
+    font-size: 6rem;
+    color: rgb(71, 66, 153);
+    text-align: center;
+}
+
+span{
+    color:rgb(205, 26, 60);
+}
+
+.textmain p{
+    font-size: 1.8rem;
+    padding-left: 20px;
+}
+
+main h2{
+    font-size: 2em;
+}
+
+article.information.center{
+    padding: 150px 0px 150px 0px;
+}
+
+.photo_large{
+    padding-bottom: 30px;
+}
+
+div .about,
+section{
+	padding: 80px 0px 0px 0;
+}
+
+.colored-line {
+	background: rgb(71, 66, 153);
+	display: block;
+	margin: auto;
+    height: 1px;
+    width: 25%;
+    z-index: 1;
+	margin-bottom: 5px;
+}
+
+.about i {
+	color: #fff;
+	font-size: 75px;
+	background: rgb(71, 66, 153);
+	border-radius: 50%;
+	line-height: 175px;
+	height: 175px;
+	width: 175px;
+    text-align: center;
+    
+}
+
+.about article{
+    margin:auto;
+    text-align: center; 
+    padding-bottom: 80px;  
+}
+
+.adress div{
+    color:rgb(71, 66, 153);
+    display:block;
+    border-bottom:2px dashed rgb(71, 66, 153);
+    text-align:center;
+    padding-bottom:20px;
+    width:35%;
+    margin: auto;
+    line-height: 15px;
+}
+
+.adress div a{
+    color:rgb(71, 66, 153);
+}
+
+.adress div:last-child{
+    border:none;
+}
+
+                                /* *****************************************************************
+                                                        FOOTER
+                                ***************************************************************** */
+
+footer{
+    display: flex;
+    background-color: #F8F8F8;
+    border-top: 2px solid #EFEFEF;
+    padding: 0px 20px;
+}
+
+footer .reseaux{
+    width: 40px;
+    padding: 10px 0 0 10px;
+}
+
+
+                                /* *****************************************************************
+                                                    CSS - ABOUT
+                                ***************************************************************** */
+
+main .qui_sommes_nous{
+    background: url(../images/bureau.jpg) repeat center center;
+	background-size: cover;
+	height: 700px;
+}
+
+.metier .service h4{
+    display: none;
+}
+
+.texte_accueil h1{
+    font-size: 4rem;
+    color: rgb(71, 66, 153);
+    text-align: center;
+}
+
+.texte_accueil p{
+    text-align: center;
+    padding:  10px 10px;
+}
+
+.textmain.qui_sommes_nous p{
+    font-size: 1.8rem;
+    padding-left: 40px;
+}
+
+.information img{
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+/* Partie metier -------------- */
+
+.metier p, .metier h4{
+    border-left:2px solid rgb(71, 66, 153);
+    border-right:2px solid rgb(71, 66, 153);
+    text-align: center;
+    padding: 7px;
+}
+.metier p{
+    margin-top: -23px;
+}
+
+.metier h4{
+    margin-top: -10px;
+    padding: 25px;
+}
+
+.metier ul{
+    padding:0px;
+    list-style: none;
+}
+
+.metier li{
+    padding: 0 40px;
+    text-align: left;
+}
+
+.metier h2{
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+
+.metier div{
+    padding-bottom: 40px;
+}
+
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+#p1, #p2, #p3, #p4, #p5{
+    margin-top: -18px;
+    padding:5px;
+    border-left:2px solid rgb(71, 66, 153);
+    border-right:2px solid rgb(71, 66, 153);
+    border-bottom:2px solid rgb(71, 66, 153);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+/* Partie partenaires -------------- */
+
+.partenaires img{
+    width: 150px;
+}
+
+.partenaires h2{
+    text-align: center;
+    border: 3px solid rgb(71, 66, 153);
+    padding: 10px;
+    border-block-width: 10px;
+}
+
+.partenaires h3{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.partenaires p{
+    display: flex;
+}
+
+.partenaires {
+    padding: 10px 0;
+}
+
+.left{
+    float: left;
+    margin: 15px;
+}
+
+.right{
+    float: right;
+}
+
+section.partenaires.center{
+    padding: 60px 0px;
+}
+
+
+                                /* *****************************************************************
+                                                            CSS - Job
+                                ***************************************************************** */
+
+main .job{
+    background: url(../images/metiers.jpg) repeat center center;
+	background-size: cover;
+	height: 700px;
+}
+
+.carriere .direction{
+    font-size: 4rem;
+    color:black;
+    border:none;
+}
+
+
+.carriere i{
+    font-size: 4rem;
+    color:rgb(71, 66, 153);
+    border:2px solid rgb(71, 66, 153);
+    border-radius: 20px;
+    padding: 20px;
+    width: 100px;
+    text-align: center;
+}
+
+.carriere a, .carriere small{
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.carriere div{
+    padding: 20px;
+    text-align: center;
+}
+
+.middle{
+    text-align: center;
+}
+
+.information_job{
+    padding: 150px 0px 80px 0px;
+}
+
+                                /* *****************************************************************
+                                                PARTIE EMPLOIS ( DETAIL METIER ) 
+                                ***************************************************************** */
+
+.emplois{
+    background: url(../images/contrat.jpg) repeat center center;
+	background-size: cover;
+	height: 700px;
+}
+
+.emplois_info{
+    padding: 60px 0px 10px 0px;
+}
+
+.emplois_info h2, .emplois_info h3, .emplois_info i{
+    color: rgb(71, 66, 153);
+    font-size: 3rem;
+    padding-right: 10px;
+}
+
+.return i{
+    font-size: 4rem;
+    color: rgb(71, 66, 153);
+    padding-top: 25px;
+}
+
+.button_join{
+    font-size: 2.5rem;
+    border: 2px solid rgb(71, 66, 153);
+    border-radius: 100px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.button_join a{
+    color: rgb(71, 66, 153);
+    text-decoration: none;
+}
+
+
+                        /* *****************************************************************
+                                                CSS - LOCATION 
+                        ***************************************************************** */
+
+.location{
+    background: url(../images/lac.jpg) repeat center center;
+	background-size: cover;
+	height: 700px;
+}
+
+#map{
+    height:400px;
+    width:95%;
+    border: 2px solid rgb(71, 66, 153);
+    margin: auto;
+}
+
+.liste{
+    padding: 20px;
+}
+
+                            /* *****************************************************************
+                                                    CSS - CONTACT
+                            ***************************************************************** */
+
+.formulaires{
+	max-width: 500px;
+	margin: 10px auto;
+	padding: 16px;
+	background: #F7F7F7;
+}
+.formulaires h1{
+	background: rgb(71, 66, 153);
+	padding: 20px 0;
+	font-size: 2rem;
+	font-weight: 300;
+	text-align: center;
+	color: #fff;
+	margin: -16px -16px 16px -16px;
+}
+
+.question{
+    text-align: center;
+}
+.formulaires input[type="text"],
+.formulaires input[type="email"],
+.formulaires textarea,
+.formulaires select 
+{
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	margin-bottom: 4%;
+	border: 1px solid #ccc;
+	padding: 3%;
+	color: #555;
+}
+.formulaires input[type="text"]:focus,
+.formulaires input[type="email"]:focus,
+.formulaires textarea:focus,
+.formulaires select:focus
+{
+	box-shadow: 0 0 5px rgb(71, 66, 153);
+	padding: 3%;
+	border: 1px solid rgb(71, 66, 153);
+}
+
+.formulaires input[type="submit"]{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	padding: 3%;
+	background: rgb(71, 66, 153);
+	border-bottom: 2px solid rgb(71, 66, 153);
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;	
+	color: #fff;
+}
+.formulaires input[type="submit"]:hover{
+	background: rgb(71, 66, 153);
+}
+
+.photo_bureau{
+    padding: 60px 0 60px 0;
+}
+
+                                /* *****************************************************************
+                                ********************************************************************
+                                                        CSS - DESKTOP
+                                ***************************************************************** */
+
+@media screen and (min-width: 1025px){
+
+body{
+    font-size:2rem;
+    line-height: 40px;
+    background-color: #F3F3F3; 
+}
+
+.container{
+    background-color: #fff;
+    max-width: 1582px;
+    margin: auto;
+}
+
+.header{
+    background-color: #fff;
+    max-width: 1582px;
+    margin: auto;
+}
+
+
+.logo{
+    text-align: end;
+    width:57%
+}
+
+.trad{
+    width: 43%;
+    text-align:end
+}
+
+.logo img{
+    width: 25%;
+}
+
+.trad img{
+    width: 6%;
+}
+
+footer p{
+    font-size: 1.5rem;
+}
+
+                        /* *****************************************************************
+                                                CSS - DESKTOP INDEX
+                        ***************************************************************** */
+
+.main {
+    height: 900px;
+}
+
+.textmain p{
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+main h2{
+    font-size: 2em;
+}
+
+.about{
+    display: flex;
+}
+
+.about article{
+    padding: 200px 0 200px 0;
+    width: 30%;
+}
+
+.adress{
+    display: flex;
+    border: none;
+    font-size: 1.6rem;
+}
+
+.adress div{
+    border-bottom: none;
+    padding-bottom: 60px;
+}
+
+                        /* *****************************************************************
+                                                CSS - DESKTOP ABOUT
+                        ***************************************************************** */
+
+main .qui_sommes_nous{
+	height: 900px;
+}
+
+.information img{
+    width: 60%;
+    padding-bottom: 20px;
+}
+
+.metier .service h4{
+    display: block;
+    border: 3px solid rgb(71, 66, 153);
+    padding:8px;
+    margin-top: 80px;
+}
+
+.metier img{
+    width: 100%;
+}
+
+.metier{
+    display:grid;
+    grid-template-areas:"h h h"
+                        "a1 a2 a3";
+
+    grid-template-columns:1fr 1fr 1fr;
+    gap:20px;
+}
+
+.metier h2 {
+    grid-area:h;
+}
+
+.metier div:first-of-type {
+    grid-area:a1;
+}
+
+.metier div:nth-of-type(2) {
+    grid-area:a2;
+}
+
+.metier div:nth-of-type(3) {
+    grid-area:a3;
+}
+.metier h4{
+    margin-top: -15px;
+}
+
+.metier p{
+    margin-top: -30px;
+}
+
+#p1, #p2, #p3, #p4, #p5{
+    margin-top: -20px;
+}
+
+.photo_large{
+    width: 100%;
+    height:400px
+}
+
+.mains{
+    height: 450px;
+}
+
+.partenaires img{
+    width: 50%;
+    float: none;
+}
+
+.partenaires article{
+    text-align: center;
+    padding: 0 40px;
+}
+
+.partenaires h3{
+    border-bottom: 1px solid #000;
+    padding-bottom: 3px
+}
+
+.partenaires{
+    display:grid;
+    grid-template-areas:"h  h"
+                        "a1 a2"
+                        "a3 a3";
+
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.partenaires h2 {
+    grid-area:h;
+}
+
+.partenaires div:first-of-type {
+    grid-area:a1;
+}
+
+.partenaires div:nth-of-type(2) {
+    grid-area:a2;
+}
+
+.partenaires div:nth-of-type(3) {
+    grid-area:a3;
+}
+
+.partenaires div:nth-of-type(4) {
+    grid-area:a4;
+}
+
+.phone{
+    display: none;
+}
+
+.left{
+    margin-bottom: 55px;
+}
+
+                                /* *****************************************************************
+                                                        CSS - DESKTOP LOCALISATION
+                                ***************************************************************** */
+
+.liste{
+    padding: 150px 40px;
+}
+
+.liste h3{
+    text-align: center;
+}
+
+                                /* *****************************************************************
+                                                        CSS - DESKTOP ADRESS
+                                ***************************************************************** */
+
+.adress{
+    padding-top: 60px;
+}
+
+                                /* *****************************************************************
+                                                        CSS - DESKTOP JOB
+                                ***************************************************************** */
+
+ main .job, 
+ .emplois {
+    height: 900px;
+}
+
+.question{
+    padding-top: 50px;
+    margin-top: -20px;
+    text-align: center;
+}
+
+}
+
+                                /* *****************************************************************
+                                                        CSS - TABLETTE JOB
+                                ***************************************************************** */
+
+
+@media screen and (min-width: 680px){
+
+.metier img{
+    width: 100%;
+}
+
+.metier div{
+    padding: 0 20px 80px 20px ;
+}
+
+.metier{
+    display:grid;
+    grid-template-areas:" h h h"
+                        "a1 a2 a3";
+
+    grid-template-columns:1fr 1fr 1fr;
+    gap:20px;
+}
+
+.metier h2 {
+    grid-area: h;
+    text-align: center;
+}
+
+.metier div:first-of-type {
+    grid-area:a1;
+}
+
+.metier div:nth-of-type(2) {
+    grid-area:a2;
+}
+
+.metier div:nth-of-type(3) {
+    grid-area:a3;
+}
+
+.metier .service h4{
+    display: block;
+}
+
+}
