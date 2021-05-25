@@ -1,0 +1,5 @@
+Bonjour
+
+Veuillez lancer le .index.php dans le dossier templates pour l'affichage du site
+
+Merci a vous, et bonne lecture.
